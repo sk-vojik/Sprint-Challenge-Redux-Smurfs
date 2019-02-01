@@ -25,7 +25,14 @@ class FormView extends React.Component {
 
   addNewSmurf = e => {
     e.preventDefault();
-    this.props.addNewSmurf(this.state.smurf)
+    this.props.addNewSmurf(this.state.smurf);
+    this.setState({ 
+      smurf: {
+        name: '',
+        height: '',
+        age: '',
+      }
+    })
   }
 
   render() {
