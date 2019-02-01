@@ -30,7 +30,7 @@ const Form = (props) => {
           value={props.smurf.height}
         />
 
-        <button onClick={props.addNewSmurf}>Add a Smurf!</button>
+        <button onClick={props.addNewSmurf}>Add Smurf</button>
 
       </form>
     </div>

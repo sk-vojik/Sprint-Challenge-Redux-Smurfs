@@ -2,9 +2,10 @@ import React from "react"
 
 const Smurf = props => {
   return (
-    <div>
+    <div className="smurf">
       <h3>{props.smurf.name}</h3>
-      <p>{`Height: ${props.smurf.height} Age: ${props.smurf.age}`}</p>
+      <p>{`Height: ${props.smurf.height} cm tall`}</p>
+      <p>{`Age: ${props.smurf.age} Smurf years old`}</p>
     </div>
   )
 }

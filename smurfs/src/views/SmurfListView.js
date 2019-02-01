@@ -12,7 +12,7 @@ class SmurfListView extends React.Component {
   render() {
     console.log(this.props);
     return (
-      <div>
+      <div className="smurflist-container">
         <h2>Smurfs!</h2>
         <SmurfList smurfs={this.props.smurfs} />
       </div>
