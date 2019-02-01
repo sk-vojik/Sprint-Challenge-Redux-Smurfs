@@ -1,10 +1,13 @@
 import React from "react"
 import { connect } from "react-redux";
 
+import { getSmurfs } from '../actions'
 import SmurfList from '../components/SmurfList'
 
 class SmurfListView extends React.Component {
-  
+  componentDidMount() {
+    this.props.getSmurfs();
+  }
 
   render() {
     console.log(this.props);
