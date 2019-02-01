@@ -23,8 +23,20 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Actions are packets of information that contain a type of action, and some data that we want that action to execute on. Actions are dispatched to our reducer. Reducers update the state according to the the type and payload of the action. Reducers are the only place where we update state! Reducers are the glue between our actions and our store. The store is the state data of our application, and it is kept here in immutability, which is why it's the 'single souce of truth'. We do not update it directly, rather copy it and create a new version.
+
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state works better for large projects with lots of data that is being used in many places. Application state, like in redux, is immutable, so it cannot be changed directly, which helps keep our state organized and only be updated exactly as we intend. This is also a very scalable way to manage state. Component states lives within a specific component, and can only be used within that component, or child components via props drilling. This might make more sense for small or simple apps with limited data.
+
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux-thunk is a tool we can use to make asynchronous API calls from our action creators. Thunks are really just functions. In our action creators, when one is called, thunk will intercept and look at what is returned. If it's an action, it will forward the action onwards to the reducer. If it's a thunk, then it will invoke that function and pass in the dispatch functions as arguments.
+
+
 
 ## Project Set Up
 
